@@ -16,7 +16,7 @@ const CardList = ({ data, viewAction, bookmarkAction, shareAction }) => {
               shareAction={shareAction}
             />
           )}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item.id.toString()}
           numColumns={2}
         />
       </View>

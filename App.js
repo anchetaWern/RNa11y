@@ -32,6 +32,6 @@ export default class App extends Component<Props> {
 const styles = {
   container: {
     flex: 10,
-    backgroundColor: "#333"
+    backgroundColor: "#FFF"
   }
 };

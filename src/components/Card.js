@@ -1,6 +1,8 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, Dimensions } from "react-native";
 import IconButton from "./IconButton";
+
+const { width } = Dimensions.get("window");
 
 const Card = ({ item, viewAction, bookmarkAction, shareAction }) => {
   return (
@@ -16,18 +18,20 @@ const Card = ({ item, viewAction, bookmarkAction, shareAction }) => {
   );
 };
 
+const cardPadding = 20;
+
 const styles = StyleSheet.create({
   card: {
-    width: 120,
-    height: 140,
-    backgroundColor: "#3e3e3e",
+    width: width / 2 - cardPadding,
+    height: 150,
+    backgroundColor: "#e0e0e0",
     padding: 10,
     margin: 10,
     alignItems: "center"
   },
   name: {
-    fontSize: 15,
-    color: "#586069",
+    fontSize: 16,
+    color: "#3a3f46",
     fontWeight: "bold"
   },
   thumbnail: {
