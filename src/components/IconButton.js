@@ -5,9 +5,13 @@ import Icon from "react-native-vector-icons/FontAwesome";
 const icon_color = "#3a3f46";
 const icon_size = 25;
 
-const IconButton = ({ icon, onPress, data }) => {
+const IconButton = ({ icon, onPress, data, label }) => {
   return (
     <TouchableOpacity
+      accessible={true}
+      accessibilityLabel={label}
+      accessibilityTraits={"button"}
+      accessibilityComponentType={"button"}
       onPress={() => {
         onPress(data.name);
       }}

@@ -3,7 +3,12 @@ import { View, Text, StyleSheet } from "react-native";
 
 const Header = ({ title }) => {
   return (
-    <View style={styles.header}>
+    <View
+      style={styles.header}
+      accessible={true}
+      accessibilityLabel={"Main app header"}
+      accessibilityRole={"header"}
+    >
       <Text style={styles.header_text}>{title}</Text>
     </View>
   );

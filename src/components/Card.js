@@ -7,12 +7,35 @@ const { width } = Dimensions.get("window");
 const Card = ({ item, viewAction, bookmarkAction, shareAction }) => {
   return (
     <View style={styles.card}>
-      <Image source={item.pic} style={styles.thumbnail} />
-      <Text style={styles.name}>{item.name}</Text>
+      <Image
+        source={item.pic}
+        style={styles.thumbnail}
+        accessible={true}
+        accessibilityRole={"image"}
+        accessibilityLabel={`${item.name} image`}
+      />
+      <Text style={styles.name} accessibilityRole={"text"}>
+        {item.name}
+      </Text>
       <View style={styles.icons}>
-        <IconButton icon="search" onPress={viewAction} data={item} />
-        <IconButton icon="bookmark" onPress={bookmarkAction} data={item} />
-        <IconButton icon="share" onPress={shareAction} data={item} />
+        <IconButton
+          icon="search"
+          onPress={viewAction}
+          data={item}
+          label={`View Pokemon ${item.name}`}
+        />
+        <IconButton
+          icon="bookmark"
+          onPress={bookmarkAction}
+          data={item}
+          label={`Bookmark Pokemon ${item.name}`}
+        />
+        <IconButton
+          icon="share"
+          onPress={shareAction}
+          data={item}
+          label={`Share Pokemon ${item.name}`}
+        />
       </View>
     </View>
   );
