@@ -22,6 +22,7 @@ git clone https://github.com/anchetaWern/RNa11y.git
 
 ```
 cd RNa11y
+git checkout a11y
 yarn install
 react-native link
 ```
