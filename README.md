@@ -2,6 +2,8 @@
 
 A sample React Native app showing you how to create more accessible apps with React Native. `starter` branch shows a not so accessible app, while `a11y` branch show the accessible version of the app.
 
+Full tutorial is available at: [https://pusher.com/tutorials/accessible-react-native](https://pusher.com/tutorials/accessible-react-native)
+
 _Note: the React Native code in this repo may be a little bit outdated and won't run immediately after you've followed the setup instructions. Be sure to refactor the code to use the more recent React Native syntax if it doesn't run for you._
 
 ## Prerequisites
